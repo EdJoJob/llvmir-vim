@@ -1,4 +1,4 @@
-" folding function for LLVM-IR
+" folding function for LLVM-IR {{{
 function! LLVMFolds()
 	let thisline = getline(v:lnum)
 	let nextline = getline(v:lnum + 1)
@@ -28,5 +28,6 @@ function! LLVMFolds()
 		return "="
 	endif
 endfunction
+"}}}
 setlocal foldmethod=expr
 setlocal foldexpr=LLVMFolds()
