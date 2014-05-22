@@ -8,7 +8,7 @@ function! LLVMFolds()
 	elseif match(thisline, '^%') == 0 && foldlevel(v:lnum - 1) <= 0
 		return ">1"
 	" matches lables
-	elseif match(thisline, '^[-a-zA-Z$._][-a-zA-Z$._0-9]*:') >= 0
+	elseif match(thisline, '^[-a-zA-Z$._"][-a-zA-Z$._0-9"]*:') >= 0
 		return ">2"
 	elseif match(nextline, '^\}$') >= 0
 		return "<2"
